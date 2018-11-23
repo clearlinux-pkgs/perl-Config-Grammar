@@ -4,7 +4,7 @@
 #
 Name     : perl-Config-Grammar
 Version  : 1.12
-Release  : 3
+Release  : 4
 URL      : https://cpan.metacpan.org/authors/id/D/DS/DSCHWEI/Config-Grammar-1.12.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/D/DS/DSCHWEI/Config-Grammar-1.12.tar.gz
 Summary  : 'A grammar-based, user-friendly config parser'
@@ -78,9 +78,9 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.26.1/Config/Grammar.pm
-/usr/lib/perl5/vendor_perl/5.26.1/Config/Grammar/Document.pm
-/usr/lib/perl5/vendor_perl/5.26.1/Config/Grammar/Dynamic.pm
+/usr/lib/perl5/vendor_perl/5.28.0/Config/Grammar.pm
+/usr/lib/perl5/vendor_perl/5.28.0/Config/Grammar/Document.pm
+/usr/lib/perl5/vendor_perl/5.28.0/Config/Grammar/Dynamic.pm
 
 %files dev
 %defattr(-,root,root,-)
