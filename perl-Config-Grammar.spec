@@ -4,12 +4,13 @@
 #
 Name     : perl-Config-Grammar
 Version  : 1.13
-Release  : 10
+Release  : 11
 URL      : https://cpan.metacpan.org/authors/id/D/DS/DSCHWEI/Config-Grammar-1.13.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/D/DS/DSCHWEI/Config-Grammar-1.13.tar.gz
 Summary  : A grammar-based, user-friendly config parser
 Group    : Development/Tools
-License  : Artistic-1.0-Perl
+License  : Artistic-1.0 Artistic-1.0-Perl GPL-1.0
+Requires: perl-Config-Grammar-license = %{version}-%{release}
 BuildRequires : buildreq-cpan
 
 %description
@@ -29,6 +30,14 @@ Requires: perl-Config-Grammar = %{version}-%{release}
 
 %description dev
 dev components for the perl-Config-Grammar package.
+
+
+%package license
+Summary: license components for the perl-Config-Grammar package.
+Group: Default
+
+%description license
+license components for the perl-Config-Grammar package.
 
 
 %prep
@@ -56,6 +65,8 @@ make TEST_VERBOSE=1 test
 
 %install
 rm -rf %{buildroot}
+mkdir -p %{buildroot}/usr/share/package-licenses/perl-Config-Grammar
+cp LICENSE %{buildroot}/usr/share/package-licenses/perl-Config-Grammar/LICENSE
 if test -f Makefile.PL; then
 make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
@@ -76,3 +87,7 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 %defattr(-,root,root,-)
 /usr/share/man/man3/Config::Grammar.3
 /usr/share/man/man3/Config::Grammar::Dynamic.3
+
+%files license
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/perl-Config-Grammar/LICENSE
