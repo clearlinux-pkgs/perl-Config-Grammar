@@ -4,7 +4,7 @@
 #
 Name     : perl-Config-Grammar
 Version  : 1.13
-Release  : 27
+Release  : 28
 URL      : https://cpan.metacpan.org/authors/id/D/DS/DSCHWEI/Config-Grammar-1.13.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/D/DS/DSCHWEI/Config-Grammar-1.13.tar.gz
 Summary  : 'A grammar-based, user-friendly config parser'
